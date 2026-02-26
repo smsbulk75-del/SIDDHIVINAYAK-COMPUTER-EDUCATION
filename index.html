@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIDDHIVINAYAK COMPUTER EDUCATION</title>
+  <!-- Font Awesome 6 (free) for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background: #f2f5fc;
+      color: #1e2a2f;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,20,50,0.1);
+      padding: 1.2rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 5px solid #f97316;
+    }
+
+    .logo-area h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(145deg, #b45309, #dc2626);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+
+    .logo-area p {
+      font-size: 1rem;
+      color: #b45309;
+      font-weight: 600;
+      margin-top: 0.3rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      flex-wrap: wrap;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1e293b;
+      font-size: 1.1rem;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a i {
+      color: #f97316;
+    }
+
+    .nav-links a:hover {
+      color: #dc2626;
+      transform: translateY(-2px);
+    }
+
+    .page-container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 2rem 2rem 1rem;
+      flex: 1;
+      width: 100%;
+    }
+
+    /* HERO / HOME CARD */
+    .hero-card {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 2.8rem 3rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 25px 40px -18px #f9731650;
+      border: 1px solid #ffedd5;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-text h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(145deg, #b45309, #e11d48);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .hero-text .subhead {
+      font-size: 1.4rem;
+      color: #2d3c4b;
+      margin: 1rem 0 1.8rem;
+      font-weight: 500;
+    }
+
+    .contact-highlight {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.2rem;
+      background: #fff7ed;
+      border-radius: 60px;
+      padding: 1.1rem 2.2rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .chip {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #2c1a0f;
+      font-weight: 500;
+    }
+
+    .chip i {
+      font-size: 1.3rem;
+      background: white;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 4px 8px #fcd7b0;
+      color: #ea580c;
+      width: 2.5rem;
+      text-align: center;
+    }
+
+    .address-block {
+      background: #feedcf;
+      border-radius: 2rem;
+      padding: 1.8rem 2.5rem;
+      margin: 2rem 0 2rem;
+      border-left: 12px solid #f97316;
+    }
+
+    .address-block i {
+      color: #b45309;
+      margin-right: 15px;
+      font-size: 2rem;
+      vertical-align: middle;
+    }
+
+    .address-block p {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #2c1a0f;
+      display: inline-block;
+    }
+
+    /* shared section style */
+    .doc-section {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 2.2rem 2.8rem;
+      margin: 2.5rem 0;
+      box-shadow: 0 15px 30px -10px rgba(249,115,22,0.15);
+      scroll-margin-top: 2rem;
+    }
+
+    .doc-section h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      border-left: 14px solid #f97316;
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+      color: #1e293b;
+    }
+
+    .doc-section h3 {
+      margin: 1.8rem 0 1rem;
+      color: #b45309;
+      font-size: 1.6rem;
+    }
+
+    .doc-section p, .doc-section li {
+      color: #334155;
+      font-size: 1.15rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .doc-section ul {
+      padding-left: 2.2rem;
+      margin: 1.2rem 0;
+    }
+
+    .contact-details-box {
+      background: #fff7ed;
+      border-radius: 2rem;
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      margin: 1.8rem 0;
+    }
+
+    .contact-details-box div i {
+      width: 2.2rem;
+      color: #f97316;
+      font-size: 1.3rem;
+    }
+
+    .footer {
+      background: #0f172a;
+      color: #f1f5f9;
+      padding: 2.2rem 2rem 2rem;
+      margin-top: 3.5rem;
+      border-radius: 3rem 3rem 0 0;
+    }
+
+    .footer-inner {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .copy-text {
+      font-size: 1.1rem;
+    }
+
+    .copy-text i {
+      color: #f97316;
+      margin: 0 4px;
+    }
+
+    .footer-links a {
+      color: #fed7aa;
+      margin-left: 2rem;
+      text-decoration: none;
+      border-bottom: 1px dotted;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    hr {
+      border: 1px solid #2d3c4b;
+      margin: 1.8rem 0 0.8rem;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+      }
+      .hero-card {
+        padding: 2rem 1.5rem;
+      }
+      .contact-highlight {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: 40px;
+      }
+      .footer-inner {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+      }
+      .footer-links a {
+        margin-left: 0;
+        margin-right: 1.5rem;
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-area">
+      <h1>SIDDHIVINAYAK COMPUTER EDUCATION</h1>
+      <p><i class="fas fa-laptop-code"></i> skill up · grow fast · Mumbai</p>
+    </div>
+    <div class="nav-links">
+      <a href="#home"><i class="fas fa-home"></i> Home</a>
+      <a href="#privacy"><i class="fas fa-lock"></i> Privacy</a>
+      <a href="#terms"><i class="fas fa-file-contract"></i> Terms</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="#copyright"><i class="fas fa-copyright"></i> Copyright</a>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <!-- HOME (SIDDHIVINAYAK full details) -->
+    <section id="home">
+      <div class="hero-card">
+        <div class="hero-text">
+          <h2>SIDDHIVINAYAK <br>COMPUTER EDUCATION</h2>
+          <div class="subhead"><i class="fas fa-graduation-cap" style="color:#f97316;"></i> quality computer training</div>
+          <div class="contact-highlight">
+            <span class="chip"><i class="fas fa-phone-alt"></i> <a href="tel:+919821463503" style="text-decoration:none;color:#2c1a0f;">+91 98214 63503</a></span>
+            <span class="chip"><i class="fas fa-envelope"></i> <a href="mailto:chandemukesh@yahoo.com" style="text-decoration:none;color:#2c1a0f;">chandemukesh@yahoo.com</a></span>
+          </div>
+        </div>
+        <div style="font-size: 4.5rem; color: #f97316; opacity: 0.25;">
+          <i class="fas fa-desktop"></i>
+        </div>
+      </div>
+
+      <!-- address line with pincode 400086 -->
+      <div class="address-block">
+        <i class="fas fa-map-pin"></i>
+        <p><strong>SIDDHIVINAYAK COMPUTER EDUCATION</strong><br>
+        Mumbai Suburban, Mumbai – 400086, Maharashtra, India</p>
+      </div>
+
+      <!-- quick highlights (optional) -->
+      <div style="display: flex; gap: 1.2rem; flex-wrap: wrap; margin: 1.5rem 0 2rem;">
+        <span style="background:#fed7aa; padding:0.7rem 2rem; border-radius:50px;"><i class="fas fa-certificate"></i> MS-CIT · Tally</span>
+        <span style="background:#fed7aa; padding:0.7rem 2rem; border-radius:50px;"><i class="fab fa-python"></i> Programming</span>
+        <span style="background:#fed7aa; padding:0.7rem 2rem; border-radius:50px;"><i class="fas fa-database"></i> DTP · hardware</span>
+      </div>
+    </section>
+
+    <!-- PRIVACY POLICY -->
+    <section id="privacy" class="doc-section">
+      <h2><i class="fas fa-shield-alt" style="margin-right: 15px; color:#f97316;"></i> Privacy Policy</h2>
+      <p><strong>Effective from:</strong> April 2025</p>
+      <p>SIDDHIVINAYAK COMPUTER EDUCATION respects your privacy. This policy describes how we handle your personal information when you visit our centre or website or communicate with us.</p>
+      <h3>📌 What we collect</h3>
+      <ul>
+        <li>Name, contact details (phone, email) provided via enquiry forms or admission.</li>
+        <li>Academic records necessary for certification (stored securely).</li>
+        <li>Website usage data (cookies) to improve experience.</li>
+      </ul>
+      <h3>📌 How we use it</h3>
+      <ul>
+        <li>To respond to queries, share course updates, and manage admissions.</li>
+        <li>To maintain student records and issue certificates.</li>
+        <li>To improve our services and communicate institute news.</li>
+      </ul>
+      <h3>📌 Data sharing</h3>
+      <p>We never sell your data. Limited data may be shared with trusted partners (e.g., email services) under confidentiality. We implement physical and digital security measures.</p>
+      <p>For any privacy concerns, contact us at <a href="mailto:chandemukesh@yahoo.com">chandemukesh@yahoo.com</a> or call +91 9821463503.</p>
+    </section>
+
+    <!-- TERMS AND CONDITIONS -->
+    <section id="terms" class="doc-section">
+      <h2><i class="fas fa-file-signature" style="margin-right: 15px; color:#f97316;"></i> Terms & Conditions</h2>
+      <p>By enrolling or using this website, you agree to the following terms:</p>
+      <ul>
+        <li><strong>Courses & fees:</strong> Course details, fees, and duration are shared at the time of admission. Fees once paid are non-refundable except as per institute policy.</li>
+        <li><strong>Code of conduct:</strong> Students must maintain decorum and follow lab rules. The institute reserves the right to suspend admission for misconduct.</li>
+        <li><strong>Intellectual property:</strong> All study material, software, and content provided are for personal use only; reproduction is prohibited.</li>
+        <li><strong>Limitation of liability:</strong> SIDDHIVINAYAK COMPUTER EDUCATION shall not be liable for any indirect loss arising from course attendance or certificate use.</li>
+        <li><strong>Modification:</strong> Terms may be updated; continued enrollment implies acceptance.</li>
+      </ul>
+      <p><i class="fas fa-check-circle" style="color:#f97316;"></i> For detailed terms, please refer to the official prospectus or contact the administration.</p>
+    </section>
+
+    <!-- CONTACT PAGE (phone, mail, full address, plus extra) -->
+    <section id="contact" class="doc-section">
+      <h2><i class="fas fa-address-book" style="margin-right: 15px; color:#f97316;"></i> Contact us</h2>
+      <div class="contact-details-box">
+        <div style="flex:1;">
+          <p><i class="fas fa-user-tie"></i> <strong>Mukesh Chande</strong> (Director)</p>
+          <p><i class="fas fa-phone-alt"></i> <a href="tel:+919821463503">+91 98214 63503</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:chandemukesh@yahoo.com">chandemukesh@yahoo.com</a></p>
+        </div>
+        <div style="flex:1;">
+          <p><i class="fas fa-map-marker-alt"></i> <strong>Mumbai Suburban</strong><br>
+          Mumbai – 400086, Maharashtra (India)</p>
+          <p><i class="fas fa-clock"></i> Mon–Sat: 9am – 7pm</p>
+        </div>
+      </div>
+      <p style="margin-top:1.2rem; font-size:1.15rem;">📍 Visit us or call for course counselling. We also offer online support via email/phone.</p>
+    </section>
+
+    <!-- COPYRIGHT SECTION -->
+    <section id="copyright" class="doc-section">
+      <h2><i class="fa-regular fa-copyright" style="margin-right: 10px; color:#f97316;"></i> Copyright & legal</h2>
+      <p><strong>© 2025 SIDDHIVINAYAK COMPUTER EDUCATION</strong> (operated under proprietor Mukesh Chande). All rights reserved.</p>
+      <p>All content on this website, including text, graphics, logos, course materials, and brochures, is the exclusive property of SIDDHIVINAYAK COMPUTER EDUCATION and protected by Indian copyright laws. Unauthorized use, reproduction, or distribution is strictly prohibited.</p>
+      <p>For permissions or queries, write to <a href="mailto:chandemukesh@yahoo.com">chandemukesh@yahoo.com</a>.</p>
+      <p style="margin-top:1.2rem;"><i class="fas fa-registered"></i> SIDDHIVINAYAK COMPUTER EDUCATION is a registered training institute in Mumbai Suburban.</p>
+    </section>
+  </main>
+
+  <!-- FOOTER with copyright info and links -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="copy-text">
+        <i class="fa-regular fa-copyright"></i> 2025 SIDDHIVINAYAK COMPUTER EDUCATION (Mukesh Chande) – Mumbai.  All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <hr>
+    <div style="max-width:1300px; margin:1rem auto 0; color:#fcd7b0; font-size:1rem;">
+      <i class="fas fa-map-pin"></i> address: Mumbai Suburban, Mumbai – 400086 (opp. railway station)
+    </div>
+  </footer>
+
+  <!-- floating back to top (optional) -->
+  <div style="position: fixed; bottom: 30px; right: 30px;">
+    <a href="#" style="background:#f97316; color:white; padding:12px 18px; border-radius:60px; box-shadow:0 6px 14px #f9731680; display:block;"><i class="fas fa-arrow-up"></i></a>
+  </div>
+</body>
+</html>
